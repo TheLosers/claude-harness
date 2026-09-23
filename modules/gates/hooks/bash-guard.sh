@@ -9,8 +9,8 @@
 #   browser-kill    브라우저 프로세스 종료
 #   push-file-list  git push — 막지 않고 올라갈 파일 목록만 보여 준다
 #
-# 왜 ask 가 아니라 deny 인가: bypass 권한 모드에서는 ask 가 프롬프트 없이 그냥 통과된다.
-# 그래서 막고, 사용자가 승인했을 때만 "승인 표식" 파일로 한 번 통과시킨다.
+# 원래 사용 환경에서 ask가 확인창 없이 통과하는 것을 관찰했다. 다른 버전까지 단정하지 않는다.
+# 명시적으로 deny로 막고, 사용자가 승인했을 때만 "승인 표식" 파일로 한 번 통과시킨다.
 # 자세한 설명: ../details/why-deny-and-marker.md
 #
 # 설정: ~/.config/claude-harness/gates.conf (예시는 ../gates.conf.example)
