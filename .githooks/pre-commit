@@ -1,0 +1,3 @@
+#!/bin/bash
+# 커밋하려는 변경에 비밀값이나 개인 금지어가 있으면 커밋을 막는다.
+exec "$(git rev-parse --show-toplevel)/scripts/check-public.sh" --staged
