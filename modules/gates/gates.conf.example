@@ -1,0 +1,27 @@
+# 게이트 훅 설정 예시.
+# ~/.config/claude-harness/gates.conf 로 복사해 고쳐 쓰세요. 없으면 아래 기본값으로 돕니다.
+# 셸 문법입니다. 훅이 이 파일을 source 합니다.
+
+# 승인 표식을 두는 폴더와 유효 시간(분)
+STATE_DIR="$HOME/.claude/state"
+MARKER_TTL_MIN=10
+
+# 게이트가 막거나 통과시킬 때마다 한 줄씩 남기는 기록. 어느 규칙이 얼마나 자주 걸리는지 볼 때 씁니다.
+LOG_FILE="$HOME/.claude/logs/harness-guard.jsonl"
+
+# 운영 DB 호스트(확장 정규식). 여기에 걸리면 조회를 포함해 접속을 막고, 표식으로도 풀지 않습니다.
+# 비워 두면 이 게이트는 꺼집니다.
+PROD_DB_HOSTS='prod-db\.example\.com|10\.0\.0\.5'
+
+# DDL/DML 을 검사할 DB 클라이언트
+DB_CLIENTS='mysql|mysqlsh|mycli|mariadb|psql|pgcli'
+
+# 종료를 막을 브라우저 프로세스 이름
+BROWSER_PATTERN='Google Chrome|Chromium|chromium|chrome'
+
+# 새 파일을 만들기 전에 옆 파일을 읽었는지 볼 확장자
+SOURCE_EXTENSIONS='kt|java|ts|tsx|js|jsx|py|go|rb|rs|swift'
+
+# 끌 게이트. 띄어 써서 나열합니다.
+# 이름: prod-db db-write pr-review pr-merge browser-kill push-file-list read-first test-disable
+DISABLED_GATES=''

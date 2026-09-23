@@ -1,0 +1,4 @@
+#!/bin/bash
+# 푸시 직전에 히스토리 전체를 한 번 더 본다.
+# 커밋 훅은 --no-verify 로 건너뛸 수 있고, 다른 머신에서 만든 커밋에는 훅이 없었을 수 있다.
+exec "$(git rev-parse --show-toplevel)/scripts/check-public.sh" --history

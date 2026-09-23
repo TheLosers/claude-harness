@@ -1,0 +1,14 @@
+.DS_Store
+.env
+.env.*
+!.env.example
+gates.conf
+denylist
+*.log
+*.jsonl
+.claude/
+.omc/
+.omx/
+.test-tmp/
+__pycache__/
+.hook-test-*/
