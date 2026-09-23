@@ -10,6 +10,16 @@
 
 Claude Code의 상대 import는 import가 적힌 파일을 기준으로 해석한다. 따라서 저장소 안의 `@modules/...`는 그대로 쓸 수 있다. [공식 import 설명](https://code.claude.com/docs/en/memory#import-additional-files)
 
+## 코드리뷰 스킬 — 선택 사항
+
+[review-judgment/SKILL.md](../skills/review-judgment/SKILL.md)는 현재 변경을 검토할 때 사용한다. 규칙 묶음과 별도로 설치하는 선택형 스킬이다.
+Claude Code에서 사용하려면 저장소의 `skills/review-judgment` 폴더를 개인 스킬 폴더에 연결한다. 같은 이름의 폴더가 이미 있다면 덮어쓰지 말고 이름을 바꿔 설치한다.
+
+```bash
+mkdir -p "$HOME/.claude/skills"
+ln -s "$HOME/claude-harness/skills/review-judgment" "$HOME/.claude/skills/review-judgment"
+```
+
 ## 훅 연결 — 선택 사항
 
 1. `jq --version`으로 jq가 있는지 확인한다.

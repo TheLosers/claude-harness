@@ -25,6 +25,7 @@ AI와 작업하다 보면 코드의 정답 여부 밖에서도 문제가 생깁�
 - [korean-writing](modules/korean-writing/RULES.md): 설명을 쉽게 쓰는 법과 실제 문장 교정 사례
 - [gates](modules/gates/RULES.md): DB·PR·브라우저·편집 전 확인
 - [backend](modules/backend/RULES.md): 반복 조회 방지와 SQL 실행 승인
+- [review-judgment](skills/review-judgment/SKILL.md): 현재 변경을 읽고 근거 있는 지적만 남기는 선택형 스킬
 
 각 묶음의 `RULES.md`는 짧은 규칙 목록이고, `details/`는 규칙이 생긴 상황과 적용 이유입니다. [CLAUDE.md](CLAUDE.md)가 네 묶음을 불러옵니다. 외부 스킬은 [출처 링크](external-skills.md)만 둡니다.
 
@@ -45,7 +46,7 @@ bash tests/test-public-scan.sh
 2. 훅도 쓰려면 [설치 안내](docs/setup.md)를 따라 기존 `~/.claude/settings.json`에 필요한 항목만 합칩니다.
 3. 회사별 DB 주소와 공개 금지어는 저장소 밖 `~/.config/claude-harness/`에 둡니다.
 
-규칙 문서만 먼저 쓰고 훅은 나중에 선택해도 됩니다. 이 저장소는 OMC 플러그인이나 외부 스킬을 설치하지 않습니다.
+규칙 문서만 먼저 쓰고 훅과 코드리뷰 스킬은 나중에 선택해도 됩니다. 이 저장소는 OMC 플러그인이나 외부 스킬을 자동 설치하지 않습니다.
 
 ## 무엇을 검증했나
 
